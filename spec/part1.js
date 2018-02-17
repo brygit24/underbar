@@ -9,7 +9,12 @@
       });
 
       it('should return whatever value is passed into it', function() {
+        
+       //expect(_.identity(['one','two','three'])).to.equal('one');
+
         var uniqueObject = {};
+
+
         expect(_.identity(1)).to.equal(1);
         expect(_.identity('string')).to.equal('string');
         expect(_.identity(false)).to.be.false;
@@ -344,9 +349,10 @@
 
       it('should handle iterators that work with a sorted array', function() {
         var iterator = function(value) { return value === 1; };
-        var numbers = [1, 2, 2, 3, 4, 4];
+        var numbers = [1, 2, 2, 3, 4, 4];        
+        //var foo = [1,2];
 
-        expect(_.uniq(FILL_ME_IN)).to.eql([1, 2]);
+        expect(_.uniq(numbers,true,iterator)).to.eql([1, 2, 3, 4]);
       });
 
       it('should produce a brand new array instead of modifying the input array', function() {
