@@ -1,3 +1,2 @@
 # underbar
-UnderBar Parts I and II
-rewrite ....
+Re-Write of the Javascript Libray
